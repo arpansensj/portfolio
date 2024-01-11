@@ -5,7 +5,7 @@ const headerData = {
     { text: "About", link: "/about" },
     { text: "Tech Stack", link: "#tech-stack" },
     { text: "Projects", link: "/projects" },
-    { text: "Pls dont Contact", link: "/contact" }
+    { text: "Contact", link: "/contact" }
   ]
 };
 

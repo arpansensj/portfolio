@@ -9,7 +9,7 @@ import TechStack from "./components/TechStack";
 
 function App() {
   return (
-    <div>
+    <div className="">
       <Navbar />
       <Sidebar/>
       <Hero />

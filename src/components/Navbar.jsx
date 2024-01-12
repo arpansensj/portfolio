@@ -10,7 +10,8 @@ const headerData = {
 
 const Navbar = () => {
   return (
-    <nav className=" text-grey-800 py-4 px-6 flex items-center justify-between sticky top-0">
+    <nav className=" text-grey-800 py-4 px-6 flex items-center justify-between sticky top-0 animate-flip-down animate-once animate-ease-in
+    ">
       <div className="flex items-center justify-center">
         <img src={headerData.logo.src} alt={headerData.logo.alt} className="w-20 h-20 rounded-full mr-4" />
         <h1 className="text-2xl font-bold">{headerData.title}</h1>

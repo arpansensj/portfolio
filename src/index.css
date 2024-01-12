@@ -7,3 +7,9 @@ hr {
     margin: 2vh auto;
     border-bottom: none;
   }
+  body{
+    background-image: url(/assets/bg.svg);
+  }
+  h1, h2, h3,p {
+    background-color: white;
+  }

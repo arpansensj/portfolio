@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <div id="contact">
-      <h2 className="text-[#42446E] lg:font-bold lg:text-3xl font-bold text-2xl text-center pt-12 lg:pt-24">
+      <h2 className="text-[#42446E] lg:font-bold lg:text-3xl font-bold text-2xl text-center pt-12 lg:pt-28">
         Contact Me
       </h2>
       <form

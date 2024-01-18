@@ -34,7 +34,7 @@ const skillIcons = [
 const TechStack = () => {
   return (
     <div id="tech-stack">
-      <h1 className="text-[#42446E] lg:font-bold lg:text-3xl font-bold text-2xl text-center lg:pt-24 pt-12">
+      <h1 className="text-[#42446E] pt-20 lg:font-bold lg:text-3xl font-bold text-2xl text-center lg:pt-28 pt-12">
         My Tech Stack
       </h1>
       <h2 className="text-[#666] text-center lg:pt-6 pt-3 lg:text-2xl md:text-2xl text-xl">

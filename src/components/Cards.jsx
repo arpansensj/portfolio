@@ -1,7 +1,7 @@
 const Cards = () => {
   return (
     <div className=" bg-white lg:w-[600px] lg:p-5 lg:shadow-xl shadow-xl lg:hover:shadow-2xl lg:rounded-3xl rounded-lg p-2">
-      <a href="https://trip-booking.vercel.app/">
+      <a href="https://trip-booking.vercel.app/" target='_blank'>
         <img
           className="lg:rounded-3xl rounded-lg border-2 border-bg-gradient-to-r from-pink-500 to-sky-500"
           src="/assets/Project1.png"

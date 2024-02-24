@@ -20,6 +20,11 @@ const Projects = () => {
           imgSrc="/assets/Project2.png"
           title="Film Directory using API"
         />
+        <Cards 
+          link="https://nomad-nest-travel.vercel.app/"
+          imgSrc="/assets/Project3.png"
+          title="Camping website using NextJS and Typescript"
+        />
       </div>
     </div>
   );

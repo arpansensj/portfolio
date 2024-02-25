@@ -22,6 +22,12 @@ const skillIcons = [
     icon: "/assets/javascript.svg",
   },
   {
+    icon: "/assets/nextjs.svg",
+  },
+  {
+    icon: "/assets/typescript.svg",
+  },
+  {
     icon: "/assets/python.svg",
   },
   {

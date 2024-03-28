@@ -25,6 +25,11 @@ const Projects = () => {
           imgSrc="/assets/Project3.png"
           title="Camping website using NextJS and Typescript"
         />
+        <Cards 
+          link="https://vr-sense-webpage.vercel.app/"
+          imgSrc="/assets/Project4.png"
+          title="VR Apps Website Landing Page"
+        />
       </div>
     </div>
   );

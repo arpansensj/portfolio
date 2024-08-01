@@ -10,22 +10,32 @@ const Projects = () => {
         Thing I've built so far
       </h3>
       <div className="flex justify-center items-center flex-wrap lg:pt-4 pt-2 p-2 gap-4">
-        <Cards 
+        <Cards
+          link="https://github.com/arpansensj/Realtime-Docs"
+          imgSrc="/assets/Project5.png"
+          title="Realtime-Docs"
+        />
+        <Cards
+          link="https://github.com/arpansensj/Genius-AI-Based-Platform"
+          imgSrc="/assets/Project6.png"
+          title="Genius AI-based SaaS"
+        />
+        <Cards
           link="https://trip-booking.vercel.app/"
           imgSrc="/assets/Project1.png"
           title="Trip Booking Page"
         />
-        <Cards 
+        <Cards
           link="https://film-directory.vercel.app/"
           imgSrc="/assets/Project2.png"
           title="Film Directory using API"
         />
-        <Cards 
+        <Cards
           link="https://nomad-nest-travel.vercel.app/"
           imgSrc="/assets/Project3.png"
           title="Camping website using NextJS and Typescript"
         />
-        <Cards 
+        <Cards
           link="https://vr-sense-webpage.vercel.app/"
           imgSrc="/assets/Project4.png"
           title="VR Apps Website Landing Page"

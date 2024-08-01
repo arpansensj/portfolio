@@ -3,13 +3,16 @@ import React, { useState } from "react";
 const FORM_ENDPOINT = "https://herotofu.com/start"; // TODO - update to the correct endpoint
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const inputs = e.target.elements;
     const data = {};
-
+    console.log(data, "arpan");
     for (let i = 0; i < inputs.length; i++) {
       if (inputs[i].name) {
         data[inputs[i].name] = inputs[i].value;
@@ -63,6 +66,7 @@ const Contact = () => {
             placeholder="Your name"
             name="name"
             className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+            onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
@@ -72,6 +76,7 @@ const Contact = () => {
             placeholder="Email"
             name="email"
             className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
@@ -80,6 +85,7 @@ const Contact = () => {
             placeholder="Your message"
             name="message"
             className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+            onChange={(e) => setMessage(e.target.value)}
             required
           />
         </div>

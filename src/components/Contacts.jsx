@@ -1,51 +1,53 @@
 import React, { useState } from "react";
 
-const FORM_ENDPOINT = "https://herotofu.com/start"; // TODO - update to the correct endpoint
+const FORM_ENDPOINT = "https://formspree.io/f/xyzgbejd";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const inputs = e.target.elements;
-    const data = {};
-    console.log(data, "arpan");
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].name) {
-        data[inputs[i].name] = inputs[i].value;
-      }
-    }
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
 
-    fetch(FORM_ENDPOINT, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Form response was not ok");
-        }
-
-        setSubmitted(true);
-      })
-      .catch((err) => {
-        // Submit the form manually
-        e.target.submit();
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
       });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle the error (e.g., show an error message to the user)
+    }
   };
 
   if (submitted) {
     return (
-      <>
-        <div className="text-2xl">Thank you!</div>
-        <div className="text-md">We'll be in touch soon.</div>
-      </>
+      <div id="contact" className="lg:pt-28 pt-12 flex flex-col items-center">
+        <div className="lg:w-[500px] w-full px-4">
+          <div className="text-2xl font-bold text-center mb-4 text-[#42446E]">
+            Thank you!
+          </div>
+          <div className="text-md text-center mb-4 text-[#42446E]">
+            We'll be in touch soon.
+          </div>
+        </div>
+      </div>
     );
   }
 
@@ -56,7 +58,6 @@ const Contact = () => {
       </h2>
       <form
         className="lg:pt-10 lg:w-[500px] p-4 pt-5 mx-auto bg-white"
-        action={FORM_ENDPOINT}
         onSubmit={handleSubmit}
         method="POST"
       >
@@ -89,9 +90,9 @@ const Contact = () => {
             required
           />
         </div>
-        <div className="pt-0 mb-3 flex justify-center ">
+        <div className="pt-0 mb-3 flex justify-center">
           <button
-            className=" w-full hover:shadow-lg focus:outline-none px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-gradient-to-r from-pink-500 to-sky-500 rounded shadow outline-none"
+            className="w-full hover:shadow-lg focus:outline-none px-6 py-3 mb-1 mr-1 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-gradient-to-r from-pink-500 to-sky-500 rounded shadow outline-none"
             type="submit"
           >
             Send a message
